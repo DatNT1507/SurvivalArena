@@ -46,6 +46,8 @@ ASurvivalArenaCharacter::ASurvivalArenaCharacter()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false;
 
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("HealthComponent"));
+
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
@@ -65,6 +67,9 @@ void ASurvivalArenaCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ASurvivalArenaCharacter::Look);
+
+		// Shooting
+		EnhancedInputComponent->BindAction(ShootAction, ETriggerEvent::Triggered, this, &ASurvivalArenaCharacter::StartShoot);
 	}
 	else
 	{
@@ -88,6 +93,92 @@ void ASurvivalArenaCharacter::Look(const FInputActionValue& Value)
 
 	// route the input
 	DoLook(LookAxisVector.X, LookAxisVector.Y);
+}
+
+void ASurvivalArenaCharacter::StartShoot()
+{
+	PerformLineTrace();
+}
+
+void ASurvivalArenaCharacter::PerformLineTrace() const
+{
+	// Get start point and end point
+	FVector TraceStart, TraceEnd;
+	if (!GetShotTracePoints(TraceStart, TraceEnd))
+	{
+		return; 
+	}
+
+	// The rsult of shoot (Hit or not)
+	FHitResult HitResult;
+	bool bDidHit = TraceForHit(TraceStart, TraceEnd, HitResult);
+	if (bDidHit)
+	{
+		ProcessTraceHit(HitResult);
+	}
+
+	// Debug shooting
+	if (bDrawDebugTrace)
+	{
+		DrawTraceDebug(TraceStart, TraceEnd, HitResult, bDidHit);
+	}
+}
+
+bool ASurvivalArenaCharacter::GetShotTracePoints(FVector& OutStartLocation, FVector& OutEndLocation) const
+{
+	if (FollowCamera == nullptr)
+	{
+		return false;
+	}
+
+	OutStartLocation = FollowCamera->GetComponentLocation();
+	const FVector ForwardVector = FollowCamera->GetForwardVector();
+	OutEndLocation = OutStartLocation + (ForwardVector * TraceDistance);
+	
+	return true;
+}
+
+bool ASurvivalArenaCharacter::TraceForHit(const FVector& Start, const FVector& End, FHitResult& OutHit) const
+{
+	FCollisionQueryParams QueryParams;
+	QueryParams.AddIgnoredActor(this); 
+
+	return GetWorld()->LineTraceSingleByChannel(
+		OutHit,
+		Start,
+		End,
+		ECC_Visibility,
+		QueryParams
+	);
+}
+
+void ASurvivalArenaCharacter::ProcessTraceHit(const FHitResult& HitResult) const
+{
+	AActor* HitActor = HitResult.GetActor();
+	if (HitActor == nullptr)
+	{
+		return;
+	}
+
+	// Tìm HealthComponent trên Actor trúng đạn
+	if (UHealthComponent* TargetHealthComp = HitActor->FindComponentByClass<UHealthComponent>())
+	{
+		// Gây sát thương bằng biến UPROPERTY
+		TargetHealthComp->TakeDamage(ShotDamage);
+	}
+}
+
+void ASurvivalArenaCharacter::DrawTraceDebug(const FVector& Start, const FVector& End, const FHitResult& HitResult, bool bDidHit) const
+{
+	// Draw Green if shoot an object, else red
+	FColor DebugColor = bDidHit ? FColor::Green : FColor::Red;
+	DrawDebugLine(GetWorld(), Start, End, DebugColor, false, 5.0f, 0, 1.0f);
+
+	if (bDidHit)
+	{
+		// Print object name received bullet
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, FString::Printf(TEXT("Hit: %s"), *HitResult.GetActor()->GetName()));
+	}
 }
 
 void ASurvivalArenaCharacter::DoMove(float Right, float Forward)

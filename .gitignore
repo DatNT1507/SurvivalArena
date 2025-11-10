@@ -1,0 +1,29 @@
+# Bỏ qua các thư mục tạm và build của Unreal
+**/Binaries/
+**/Build/
+**/Intermediate/
+**/Saved/
+
+# Bỏ qua các file solution/project của IDE
+*.VC.db
+*.suo
+*.sln
+*.sdf
+*.opensdf
+*.ide
+*.user
+*.userprefs
+*.xcodeproj/
+*.xcworkspace/
+
+# Bỏ qua thư mục cache của Visual Studio
+.vs/
+
+# Bỏ qua các file .DS_Store của macOS
+.DS_Store
+.DS_Store?
+
+# Bỏ qua các file tạm của một số trình soạn thảo
+*.swp
+*~.nib
+local.properties
