@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SurvivalArena.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SurvivalArena.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SurvivalArenaEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\SurvivalArena">
+      <UniqueIdentifier>{1164E4EA-9502-39D6-BBA2-A43A7F99216A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\HealthComponent.cpp">
+      <Filter>Source\SurvivalArena</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\HealthComponent.h">
+      <Filter>Source\SurvivalArena</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\SurvivalArena\SurvivalArena.Build.cs">
+      <Filter>Source\SurvivalArena</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SurvivalArena\SurvivalArena.cpp">
+      <Filter>Source\SurvivalArena</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\SurvivalArena.h">
+      <Filter>Source\SurvivalArena</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\SurvivalArenaCharacter.cpp">
+      <Filter>Source\SurvivalArena</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\SurvivalArenaCharacter.h">
+      <Filter>Source\SurvivalArena</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\SurvivalArenaGameMode.cpp">
+      <Filter>Source\SurvivalArena</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\SurvivalArenaGameMode.h">
+      <Filter>Source\SurvivalArena</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\SurvivalArenaPlayerController.cpp">
+      <Filter>Source\SurvivalArena</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\SurvivalArenaPlayerController.h">
+      <Filter>Source\SurvivalArena</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_Combat">
+      <UniqueIdentifier>{7B51E487-FCC0-395C-AD26-7A00F5120E6D}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\CombatCharacter.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\CombatCharacter.h">
+      <Filter>Source\SurvivalArena\Variant_Combat</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\CombatGameMode.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\CombatGameMode.h">
+      <Filter>Source\SurvivalArena\Variant_Combat</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\CombatPlayerController.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\CombatPlayerController.h">
+      <Filter>Source\SurvivalArena\Variant_Combat</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_Combat\AI">
+      <UniqueIdentifier>{0BBF439D-2648-3520-BABB-8E847EFED8BA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\AI\CombatAIController.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\AI\CombatAIController.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\AI\CombatEnemy.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\AI\CombatEnemy.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\AI\CombatEnemySpawner.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\AI\CombatEnemySpawner.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\AI\CombatStateTreeUtility.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\AI\CombatStateTreeUtility.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\AI\EnvQueryContext_Player.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\AI\EnvQueryContext_Player.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\AI</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_Combat\Animation">
+      <UniqueIdentifier>{05251684-5816-3403-BDF1-50DF18DF9237}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Animation\AnimNotify_CheckChargedAttack.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Animation\AnimNotify_CheckChargedAttack.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Animation</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Animation\AnimNotify_CheckCombo.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Animation\AnimNotify_CheckCombo.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Animation</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Animation\AnimNotify_DoAttackTrace.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Animation\AnimNotify_DoAttackTrace.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Animation</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_Combat\Gameplay">
+      <UniqueIdentifier>{8F30DC6A-1EE3-3D3A-BE91-9B0FA29C08C6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Gameplay\CombatActivationVolume.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Gameplay\CombatActivationVolume.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Gameplay\CombatCheckpointVolume.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Gameplay\CombatCheckpointVolume.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Gameplay\CombatDamageableBox.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Gameplay\CombatDamageableBox.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Gameplay\CombatDummy.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Gameplay\CombatDummy.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Gameplay\CombatLavaFloor.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Gameplay\CombatLavaFloor.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Gameplay</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_Combat\Interfaces">
+      <UniqueIdentifier>{AB708B64-CEBC-37C2-A670-C89E2E82392C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Interfaces\CombatActivatable.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Interfaces\CombatActivatable.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Interfaces</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Interfaces\CombatAttacker.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Interfaces\CombatAttacker.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Interfaces</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\Interfaces\CombatDamageable.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\Interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\Interfaces\CombatDamageable.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\Interfaces</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_Combat\UI">
+      <UniqueIdentifier>{522EA2F3-BF19-368C-BBD9-96051CA295CD}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Combat\UI\CombatLifeBar.cpp">
+      <Filter>Source\SurvivalArena\Variant_Combat\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Combat\UI\CombatLifeBar.h">
+      <Filter>Source\SurvivalArena\Variant_Combat\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_Platforming">
+      <UniqueIdentifier>{8406FB86-23C3-35AA-8A1C-67A24AE51B3A}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Platforming\PlatformingCharacter.cpp">
+      <Filter>Source\SurvivalArena\Variant_Platforming</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Platforming\PlatformingCharacter.h">
+      <Filter>Source\SurvivalArena\Variant_Platforming</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Platforming\PlatformingGameMode.cpp">
+      <Filter>Source\SurvivalArena\Variant_Platforming</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Platforming\PlatformingGameMode.h">
+      <Filter>Source\SurvivalArena\Variant_Platforming</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Platforming\PlatformingPlayerController.cpp">
+      <Filter>Source\SurvivalArena\Variant_Platforming</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Platforming\PlatformingPlayerController.h">
+      <Filter>Source\SurvivalArena\Variant_Platforming</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_Platforming\Animation">
+      <UniqueIdentifier>{6B36422B-79FD-3D2E-BC49-C4B3E57925B9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_Platforming\Animation\AnimNotify_EndDash.cpp">
+      <Filter>Source\SurvivalArena\Variant_Platforming\Animation</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_Platforming\Animation\AnimNotify_EndDash.h">
+      <Filter>Source\SurvivalArena\Variant_Platforming\Animation</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_SideScrolling">
+      <UniqueIdentifier>{FC7E58C4-D650-3EBB-A762-0B006F5089D0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\SideScrollingCameraManager.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\SideScrollingCameraManager.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\SideScrollingCharacter.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\SideScrollingCharacter.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\SideScrollingGameMode.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\SideScrollingGameMode.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\SideScrollingPlayerController.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\SideScrollingPlayerController.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_SideScrolling\AI">
+      <UniqueIdentifier>{8F5A48FD-D6FD-3AC4-8A2F-6EB2B51E6726}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\AI\SideScrollingAIController.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\AI\SideScrollingAIController.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\AI\SideScrollingNPC.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\AI\SideScrollingNPC.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\AI\SideScrollingStateTreeUtility.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\AI\SideScrollingStateTreeUtility.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\AI</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_SideScrolling\Gameplay">
+      <UniqueIdentifier>{CCA60EBC-AA90-3959-9C73-7ECA5138F582}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\Gameplay\SideScrollingJumpPad.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\Gameplay\SideScrollingJumpPad.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\Gameplay\SideScrollingMovingPlatform.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\Gameplay\SideScrollingMovingPlatform.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\Gameplay\SideScrollingPickup.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\Gameplay\SideScrollingPickup.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\Gameplay</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\Gameplay\SideScrollingSoftPlatform.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\Gameplay</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\Gameplay\SideScrollingSoftPlatform.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\Gameplay</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_SideScrolling\Interfaces">
+      <UniqueIdentifier>{3B1AF2AF-ABBC-3795-A051-03DABD27DB17}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\Interfaces\SideScrollingInteractable.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\Interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\Interfaces\SideScrollingInteractable.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\Interfaces</Filter>
+    </ClInclude>
+    <Filter Include="Source\SurvivalArena\Variant_SideScrolling\UI">
+      <UniqueIdentifier>{90E0CD51-030D-368C-9E47-2F028C2164B3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SurvivalArena\Variant_SideScrolling\UI\SideScrollingUI.cpp">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\SurvivalArena\Variant_SideScrolling\UI\SideScrollingUI.h">
+      <Filter>Source\SurvivalArena\Variant_SideScrolling\UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

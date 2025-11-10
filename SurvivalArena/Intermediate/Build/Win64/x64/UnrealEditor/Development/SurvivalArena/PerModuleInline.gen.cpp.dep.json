@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\survivalarena\\survivalarena\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\survivalarena\\permoduleinline.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\survivalarena\\survivalarena\\intermediate\\build\\win64\\x64\\survivalarenaeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "d:\\survivalarena\\survivalarena\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\survivalarena\\definitions.survivalarena.h",
+            "d:\\ue\\ue_5.6\\engine\\source\\runtime\\core\\public\\hal\\permoduleinline.inl"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

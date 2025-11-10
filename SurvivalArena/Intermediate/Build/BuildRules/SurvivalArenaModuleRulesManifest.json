@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\SurvivalArena\\SurvivalArena\\Source\\SurvivalArena\\SurvivalArena.Build.cs",
+		"D:\\SurvivalArena\\SurvivalArena\\Source\\SurvivalArena.Target.cs",
+		"D:\\SurvivalArena\\SurvivalArena\\Source\\SurvivalArenaEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}
