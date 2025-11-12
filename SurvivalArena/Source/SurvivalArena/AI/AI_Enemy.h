@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Components/HealthComponent.h"
+#include "BehaviorTree/BehaviorTree.h"
 #include "AI_Enemy.generated.h"
 
 UCLASS()
@@ -23,6 +24,8 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	UHealthComponent* HealthComponent;
 
+	UPROPERTY(EditDefaultsOnly)
+	UBehaviorTree* BehaviorTreeAsset;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -32,4 +35,6 @@ public:
 
 	UFUNCTION()
 	void HandleDeath();
+
+	UBehaviorTree* GetBehaviorTree() const { return BehaviorTreeAsset; }
 };

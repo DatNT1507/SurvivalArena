@@ -9,9 +9,10 @@
 #include "Perception/AIPerceptionStimuliSourceComponent.h"
 #include "AI_EnemyController.generated.h"
 
-/**
- * 
- */
+class UAISenseConfig_Sight;
+
+class UBlackboardComponent;
+
 UCLASS()
 class SURVIVALARENA_API AAI_EnemyController : public AAIController
 {
@@ -24,6 +25,11 @@ protected:
 	
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
 	UAIPerceptionComponent* AIPerceptionComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
+	UBlackboardComponent* BlackboardComponent;
 	
-	void ConfigureSight(UAISenseConfig_Sight* SightConfig);
+	void ConfigureSight(UAISenseConfig_Sight* SightConfig) const;
+
+	virtual void OnPossess(APawn* InPawn) override;
 };
