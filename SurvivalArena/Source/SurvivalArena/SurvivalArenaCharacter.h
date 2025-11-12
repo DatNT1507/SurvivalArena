@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Components/HealthComponent.h"
 #include "Logging/LogMacros.h"
+#include "Perception/AIPerceptionStimuliSourceComponent.h"
 #include "SurvivalArenaCharacter.generated.h"
 
 class USpringArmComponent;
@@ -65,6 +66,9 @@ protected:
 	// 4. Thêm công tắc bật/tắt debug
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
 	bool bDrawDebugTrace = false;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AI")
+	UAIPerceptionStimuliSourceComponent* StimuliSourceComponent;
 public:
 
 	/** Constructor */
