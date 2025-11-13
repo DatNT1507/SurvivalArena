@@ -2,9 +2,6 @@
 
 
 #include "AI/AI_EnemyController.h"
-#include "BehaviorTree/BlackboardComponent.h"
-#include "BehaviorTree/BehaviorTree.h"
-#include "AI/AI_Enemy.h"
 
 AAI_EnemyController::AAI_EnemyController()
 {
@@ -15,6 +12,8 @@ AAI_EnemyController::AAI_EnemyController()
 	UAISenseConfig_Sight* SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("SightConfig"));
 	
 	ConfigureSight(SightConfig);
+
+	AIPerceptionComponent->OnPerceptionUpdated.AddDynamic(this, &AAI_EnemyController::OnPerceptionUpdated);
 }
 
 void AAI_EnemyController::ConfigureSight(UAISenseConfig_Sight* SightConfig) const
@@ -50,6 +49,44 @@ void AAI_EnemyController::OnPossess(APawn* InPawn)
 			BlackboardComponent->InitializeBlackboard(*(AIEnemy->GetBehaviorTree()->GetBlackboardAsset()));
 
 			RunBehaviorTree(AIEnemy->GetBehaviorTree());
+		}
+	}
+}
+
+void AAI_EnemyController::OnPerceptionUpdated(const TArray<AActor*>& UpdatedActors)
+{
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(this, 0);
+
+	if (PlayerPawn == nullptr)
+	{
+		return;
+	}
+
+	for (AActor* Actor : UpdatedActors)
+	{
+		FActorPerceptionBlueprintInfo Info;
+		AIPerceptionComponent->GetActorsPerception(Actor, Info);
+
+		if (Actor == PlayerPawn)
+		{
+			for (const FAIStimulus& Stimulus : Info.LastSensedStimuli)
+			{
+				if (Stimulus.Type == UAISense::GetSenseID<UAISense_Sight>())
+				{
+					if (Stimulus.WasSuccessfullySensed())
+					{
+						BlackboardComponent->SetValueAsObject("TargetPlayer", PlayerPawn);
+						GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Player Spotted"));
+						return;
+					}
+					else
+					{
+						BlackboardComponent->ClearValue("TargetPlayer");
+						GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Player Lost"));
+						return;
+					}
+				}
+			}
 		}
 	}
 }

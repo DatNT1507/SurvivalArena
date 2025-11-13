@@ -4,9 +4,15 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "AI/AI_Enemy.h"
 #include "Perception/AIPerceptionComponent.h"
 #include "Perception/AISenseConfig_Sight.h"
 #include "Perception/AIPerceptionStimuliSourceComponent.h"
+#include "BehaviorTree/BlackboardComponent.h"
+#include "BehaviorTree/BehaviorTree.h"
+#include "Kismet/GameplayStatics.h"
+#include "Perception/AISense_Sight.h"
+
 #include "AI_EnemyController.generated.h"
 
 class UAISenseConfig_Sight;
@@ -32,4 +38,7 @@ protected:
 	void ConfigureSight(UAISenseConfig_Sight* SightConfig) const;
 
 	virtual void OnPossess(APawn* InPawn) override;
+	
+	UFUNCTION()
+	void OnPerceptionUpdated(const TArray<AActor*>& UpdatedActors);
 };
